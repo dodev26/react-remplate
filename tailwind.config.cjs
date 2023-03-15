@@ -2,7 +2,19 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {}
+    container: {
+      center: true,
+      padding: '15px'
+    },
+    screens: {
+      sm: '576px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1200px'
+    },
+    extend: {
+      screens: {}
+    }
   },
-  plugins: [require('@tailwindcss/line-clamp')]
+  plugins: [require('@tailwindcss/line-clamp'), require('@tailwindcss/container-queries')]
 }

@@ -1,10 +1,12 @@
 import { useRoutes } from 'react-router-dom'
+import Home from 'src/pages/home'
 
 export default function Routes() {
   const routeElements = useRoutes([
     {
       path: '/',
-      element: <h1>home</h1>
+      index: true,
+      element: <Home />
     },
     {
       path: '/about',
