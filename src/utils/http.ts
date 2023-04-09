@@ -1,3 +1,4 @@
+/* eslint-disable import/named */
 import axios, { AxiosInstance } from 'axios'
 
 class Http {

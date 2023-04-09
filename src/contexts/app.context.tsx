@@ -1,4 +1,5 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 interface IAppcontext {
   isAuthenticated: boolean
@@ -11,12 +12,23 @@ const initialState: IAppcontext = {
 export const AppContext = createContext<IAppcontext>(initialState)
 
 const AppProvider = ({ children }: { children: React.ReactNode; defaultValue?: IAppcontext }) => {
-  const [darkMode, setDarkMode] = useState<boolean>(initialState.darkMode)
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(initialState.isAuthenticated)
+  const [darkMode] = useState<boolean>(initialState.darkMode)
+  const [isAuthenticated] = useState<boolean>(initialState.isAuthenticated)
+  const location = useLocation()
   const value = {
     darkMode,
     isAuthenticated
   }
+
+  useEffect(() => {
+    if (location.pathname && !location.search) {
+      scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
+  }, [location.pathname])
+
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>
 }
 

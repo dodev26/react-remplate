@@ -6,6 +6,8 @@ import './index.css'
 import AppProvider from './contexts/app.context'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { QueryClientProvider, QueryClient } from 'react-query'
+import { ModalProvider } from './contexts/modal.context'
+import ProductProvider from './contexts/product.context'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -20,7 +22,11 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
         <AppProvider>
-          <App />
+          <ModalProvider>
+            <ProductProvider>
+              <App />
+            </ProductProvider>
+          </ModalProvider>
         </AppProvider>
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
