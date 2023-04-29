@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import Product from 'src/components/product'
 import path from 'src/constants/path'
 import { PRODUCT_AT_HOME } from 'src/data/DATA'
-import data_about, { photos } from './constants/constants'
+import data_about, { data_about_company, photos } from './constants/constants'
 import { useState } from 'react'
 import Gallery from 'react-photo-gallery'
 import { motion } from 'framer-motion'
@@ -73,41 +73,10 @@ const Home = () => {
                       <h3 className='company-name mb-4'>
                         <span className='text-yeelow'>ĐỨC</span> DUY <span className='text-yeelow'>HINH</span>
                       </h3>
-
-                      <div className='flex flex-col'>
-                        <p>
-                          Chúng tôi là một doanh nghiệp tại TP.Đà Nẵng, tiên phong trong đầu tư, nghiên cứu, phát triển
-                          và bảo vệ giống quế thuần túy của Quảng Nam.
-                        </p>
-
-                        <p>
-                          Với gần 30 năm kinh nghiệm trong lĩnh vực trồng và chế biến quế, chúng tôi tự hào là một trong
-                          những đơn vị hàng đầu của miền trung trong lĩnh vực nuôi trồng và sản xuất các sản phẩm từ
-                          quế.Mục tiêu của chúng tôi là đem đến cho khách hàng những sản phẩm chất lượng nhất, an toàn
-                          nhất và giá cả hợp lý nhất.
-                          {!showMoreAbout && (
-                            <button
-                              onClick={() => setShowMoreAbout(!showMoreAbout)}
-                              className='inline-block text-xs underline transition-all hover:text-yellow-400'
-                            >
-                              xem thêm
-                            </button>
-                          )}
-                          {showMoreAbout && (
-                            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-                              Xa hơn nữa , chúng tôi luôn nung nấu quyết tâm bảo vệ và duy trì giống quế thuần túy đặc
-                              trưng của vùng miền trung , góp phần bảo tồn và phát triển nguồn tài nguyên , làm đa dạng
-                              hóa sản phẩm nông nghiệp của đất nước.{' '}
-                              <button
-                                onClick={() => setShowMoreAbout(!showMoreAbout)}
-                                className='inline-block text-xs underline transition-all hover:text-yellow-400'
-                              >
-                                thu gọn
-                              </button>
-                            </motion.div>
-                          )}
-                        </p>
-                      </div>
+                      <div
+                        className='flex flex-col'
+                        dangerouslySetInnerHTML={{ __html: data_about_company.desc }}
+                      ></div>
                     </div>
                   </div>
                   <div className='col-12 col-md-6'>
@@ -128,25 +97,24 @@ const Home = () => {
             <div className='row text-center' data-aos='fade-up'>
               {data_about.length > 0 &&
                 data_about.map((item) => (
-                  <div className='col-md-4 text-center' key={item.id}>
+                  <div className='col-md-4' key={item.id}>
                     <img
                       src={item.img}
                       loading='lazy'
                       alt='img'
-                      className='img-fluid transi transition-all duration-200 hover:grayscale'
+                      className='img-fluid  transition-all duration-200 hover:grayscale'
                     />
                     <h4 className='my-3'>{item.title}</h4>
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-                      <p
-                        className={`text-muted transition-all ${showMore.includes(item.id) ? 'line-clamp-0' : 'line-clamp-2'
+                      <div
+                        className={`text-muted transition-all ${showMore.includes(item.id) ? 'line-clamp-0 text-left' : 'text-center line-clamp-3'
                           }`}
-                      >
-                        {item.desc}
-                      </p>
+                        dangerouslySetInnerHTML={{ __html: item.desc }}
+                      />
                     </motion.div>
                     <button
                       onClick={() => handleShowMore(item.id)}
-                      className={`mx-auto flex items-center ${showMore.includes(item.id) ? 'bg-gray-400' : 'bg-yeelow'
+                      className={`mx-auto mt-3 flex items-center ${showMore.includes(item.id) ? 'bg-gray-400' : 'bg-yeelow'
                         }   p-2  text-xs text-white shadow-md focus:outline-1 `}
                     >
                       {showMore.includes(item.id) ? (

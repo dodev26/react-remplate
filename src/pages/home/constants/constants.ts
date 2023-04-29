@@ -19,24 +19,38 @@ import {
   queongcaovo
 } from 'src/assets/img'
 
+export const data_about_company =
+{
+  desc: `
+   <p> Chúng tôi là một doanh nghiệp tại TP. Đà Nẵng, tiên phong trong đầu tư, nghiên cứu, phát triển, bảo tồn cây dược liệu và cây quế. </p>
+    <p>Với gần 30 năm kinh nghiệm trong lĩnh vực trồng và chế biến cây dược liệu, cây quế. Công ty Đức Duy Hinh tự hào là một trong những đơn vị hàng đầu của miền Trung ở lĩnh vực nuôi trồng và sản xuất các sản phẩm từ những thảo dược thuần túy hữu cơ.</p>
+<p>Mục tiêu của công ty là đem đến cho khách hàng gần xa những sản phẩm <strong class="text-black"><i>thuần túy hữu cơ</i></strong> của địa phương chất lượng, an toàn nhất.</p>
+    `
+}
+
+
 const data_about = [
   {
     id: 1,
     title: 'Tầm Nhìn',
     img: CayQueCao2,
-    desc: 'Trở thành một trong những công ty hàng đầu của miền trung trong lĩnh vực sản xuất và kinh doanh giống cây quế thuần túy, đồng thời là một trong những công ty có tầm ảnh hưởng trong lĩnh vực sản xuất và nuôi trồng giống cây quế thuần túy tại Việt Nam.'
+    desc: `<p>
+    Đức Duy Hinh mong muốn đưa hình ảnh, chất lượng của cây quế Quảng Nam từ một sản phẩm làm gia vị đi sâu vào lĩnh vực bào chế thuốc cải thiện <strong class="text-black"><i>sức khỏe cho con người</i></strong> ở Việt Nam và ra thương trường quốc tế.
+    </p>`
   },
   {
     id: 2,
     title: 'Sứ mệnh',
     img: cayquexanh,
-    desc: 'Chúng tôi quyết tâm đưa cây quế miền trung đến mọi miền đất nước, trên hết là việc bảo vệ giống cây quế thuần túy của địa phương không bị suy giảm và mất đi chất lượng vốn có. Đồng thời đảm bảo nguồn tài nguyên quý của đất nước không bị suy giảm. Chính vì vậy, công ty ra đời với mục tiêu sản xuất, bảo vệ và phát triển giống quế , tạo việc làm cho bà con nông dân, đem lại lợi ích cho xã hội.'
+    desc: `<p>
+  Đức Duy Hinh quyết tâm đưa cây quế miền Trung đi khắp năm châu, trên hết là việc bảo vệ <strong class="text-black"><i>giống cây quế</i></strong> thuần túy của địa phương <strong class="text-black"><i>đậm chất tinh dầu</i></strong>, tạo nhiều việc làm cho bà con nông dân, đem lại lợi ích thiết thực cho xã hội.
+    </p>`
   },
   {
     id: 3,
     title: 'Giá Trị Cốt Lõi',
     img: cayquecon,
-    desc: ' Chất lượng sản phẩm là yếu tố quan trọng nhất, đó là nền tảng để xây dựng thương hiệu và đem lại lợi ích cho khách hàng.'
+    desc: '<p>Đức Duy Hinh quyết tâm gìn giữ chất lượng sản phẩm là yếu tố quan trọng nhất, là nền tảng để xây dựng thương hiệu và đem lại lợi ích cho nông dân song hành cùng lợi ích khách hàng.</p>'
   }
 ] as const
 
@@ -44,88 +58,88 @@ export const photos = [
   {
     src: nongdan5,
     width: 4,
-    height: 3,
+    height: 4
   },
   {
     src: cayquexanh,
-    width: 1,
-    height: 1
+    width: 4,
+    height: 4
   },
   {
     src: nongdan4,
-    width: 1,
-    height: 1
+    width: 4,
+    height: 4
   },
   {
     src: cayquecon,
-    width: 3,
+    width: 4,
     height: 4
   },
   {
     src: NongDan3,
     width: 4,
-    height: 3
+    height: 4
   },
   {
     src: quechethanh,
-    width: 1,
-    height: 1
+    width: 4,
+    height: 4
   },
   {
     src: queong,
-    width: 1,
-    height: 1
+    width: 4,
+    height: 4
   },
   {
     src: quedapcanh,
-    width: 3,
+    width: 4,
     height: 4
   },
   {
     src: queongcaovo,
-    width: 3,
+    width: 4,
     height: 4
   },
   {
     src: CayQueCao2,
     width: 4,
-    height: 3
+    height: 4
   },
   {
     src: NongDan,
     width: 4,
-    height: 3
+    height: 4
   },
   {
     src: NongDan2,
     width: 4,
-    height: 3
+    height: 4
   },
 
   {
     src: NongDan1,
     width: 4,
-    height: 3
+    height: 4
   },
   {
     src: ThanQue,
     width: 4,
-    height: 3
+    height: 4
   },
   {
     src: QueXs1,
     width: 4,
-    height: 3
+    height: 4
   },
   {
     src: QueXs2,
-    width: 2,
-    height: 3
+    width: 4,
+    height: 4
   },
   {
     src: QueXs3,
-    width: 2,
-    height: 3
+    width: 4,
+    height: 4
   }
 ]
 

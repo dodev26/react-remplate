@@ -38,8 +38,8 @@ export const DETAIL_PRODUCT_AT_HOME: Product[] = [
       Humidity: '13,5% tối đa',
       Impurities: '1% tối đa',
       Size: '15 – 25cm (80% tối thiểu)',
-      Color: 'nâu đậm, không nấm mốc',
-      Packing: 'Carton (15kg net)',
+      Color: 'nâu vàng, không nấm mốc',
+      Packing: '10kg/PP bag',
       Origin: 'Việt Nam',
       DeliveryPort: 'Đà Nẵng, Việt Nam'
     }
@@ -54,8 +54,8 @@ export const DETAIL_PRODUCT_AT_HOME: Product[] = [
       Impurities: '1% tối đa',
       Size: '25 – 45cm (80% tối thiểu)',
       Thickness: ' >4mm',
-      Color: 'màu xám vỏ cây, không nấm mốc',
-      Packing: '20kg/PP bag',
+      Color: 'màu vàng nhạt, không nấm mốc',
+      Packing: '10kg/PP bag',
       Origin: 'Việt Nam',
       DeliveryPort: 'Đà Nẵng, Việt Nam'
     }
@@ -71,7 +71,7 @@ export const DETAIL_PRODUCT_AT_HOME: Product[] = [
       Size: '1-8cm',
       Thickness: ' >4mm',
       Color: 'nâu vàng, không nấm mốc',
-      Packing: '15-20kg/carton',
+      Packing: '10kg/carton',
       Origin: 'Việt Nam',
       DeliveryPort: 'Đà Nẵng, Việt Nam'
     }
@@ -87,7 +87,7 @@ export const DETAIL_PRODUCT_AT_HOME: Product[] = [
       Size: '15cm trở lên',
       Thickness: ' >6mm',
       Color: 'nâu nhạt, không nấm mốc',
-      Packing: '10 - 15kg/carton',
+      Packing: '10kg/carton',
       Origin: 'Việt Nam',
       DeliveryPort: 'Đà Nẵng, Việt Nam'
     }

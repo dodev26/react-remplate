@@ -37,7 +37,7 @@ const MainLayout = () => {
           <li>
             <a
               className='btn btn-light btn-telephone facebook mx-2 border-0'
-              href={`tel:${CONTACT.phone}`}
+              href={`tel:${CONTACT.phone[2]}`}
               aria-label='Zalo'
             >
               <svg
